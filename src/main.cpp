@@ -24,5 +24,7 @@ int main()
 
     Circle circle1(3.0);
 
+    Circle circle2(4.0);
+
     return 0;
 }
