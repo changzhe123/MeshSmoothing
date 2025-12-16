@@ -18,6 +18,17 @@ file(GLOB_RECURSE PROJECT_SOURCES
 	${PROJECT_SOURCE_DIR}/src/triangle.cpp
 )
 
+file(GLOB_RECURSE PROJECT_HEADERS
+	${PROJECT_SOURCE_DIR}/include/circle.h
+	${PROJECT_SOURCE_DIR}/include/fourcutter.h
+	${PROJECT_SOURCE_DIR}/include/point3.h
+	${PROJECT_SOURCE_DIR}/include/rectangle.h
+	${PROJECT_SOURCE_DIR}/include/shape.h
+	${PROJECT_SOURCE_DIR}/include/shape_namespace_def.h
+	${PROJECT_SOURCE_DIR}/include/triangle.h
+)
+
+
 # 防御性检查，避免 No SOURCES 错误
 if (PROJECT_SOURCES STREQUAL "")
     message(FATAL_ERROR
@@ -29,6 +40,7 @@ endif()
 # 生成可执行文件
 add_executable(MeshSmoothing
     ${PROJECT_SOURCES}
+	${PROJECT_HEADERS}
 )
 
 # 头文件搜索路径
