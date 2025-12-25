@@ -4,6 +4,8 @@
 #include "circle.h"
 #include "point3.h"
 
+#include <cmath>
+#include <vector>
 #include <iostream>
 
 using namespace CZ;
@@ -22,9 +24,14 @@ int main()
     double circle_area = circle.getCircleArea(1.0);
     std::cout << "Area of circle is: " << circle_area << std::endl;
 
-    Circle circle1(3.0);
-
-    Circle circle2(4.0);
+    std::cout << atan2(1, 1) << std::endl;
+    std::cout << atan2(1, -1) << std::endl;
+    std::cout << atan2(-1, -1) << std::endl;
+    std::cout << atan2(-1, 1) << std::endl;
 
     return 0;
 }
+
+
+
+

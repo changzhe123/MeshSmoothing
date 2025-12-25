@@ -12,7 +12,8 @@ public:
 
 	virtual double getRectangleArea(double width, double height) const;
 	virtual double getCircleArea(double radius) const;
-	virtual double getTriangleArea(double a, double b, double c, double d, double e, double f) const;
+	virtual double getTriangleArea(double a, double b, double c, 
+		double d, double e, double f) const;
 
 private:
 
