@@ -10,10 +10,14 @@ public:
 
 	virtual ~Point3() {};
 
-	// ²Ù×÷·û
+	static Point3 Cross(const Point3& u, const Point3& v);
+	static double Dot(const Point3& u, const Point3& v);
+
+	Point3 CrossPro(const Point3& u) const;
+	double DotPro(const Point3& u) const;
+
 	Point3& operator=(const Point3& p);
 	Point3& operator+(const Point3& p);
-	
 
 public:
 
