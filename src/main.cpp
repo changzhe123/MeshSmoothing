@@ -16,8 +16,16 @@ int main()
     double rect_area = rect.getRectangleArea(5.0, 2.0);
     std::cout << "Area of rectangle is: " << rect_area << std::endl;
 
-    Triangle tri(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
-    double tri_area = tri.getTriangleArea(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+    Point3 p1(1, 1, 1);
+    Point3 p2(5, 4, 3);
+    Point3 p3(5, 1, 3);
+
+    Triangle tri1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+    double tri_area = tri1.getTriangleArea(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+    std::cout << "Area of triangle is: " << tri_area << std::endl;
+
+    Triangle tri2(p1, p2, p3);
+    double tri_area = tri2.getTriangleArea(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
     std::cout << "Area of triangle is: " << tri_area << std::endl;
 
     Circle circle(2.0);

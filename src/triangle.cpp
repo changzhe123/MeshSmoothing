@@ -10,6 +10,15 @@ NAMESPACE_CZ_BEGIN
 Triangle::Triangle(double a, double b, double c, double d, double e, double f)
 	: a(a), b(b), c(c), d(d), e(e), f(f) {}
 
+Triangle::Triangle(const Point3& p1, const Point3& p2, const Point3& p3)
+	: p1(p1), p2(p2), p3(p3){}
+
+double Triangle::getTriangleArea(double a, double b, double c, double d, double e, double f) const
+{
+	double s = (a + b + c + d + e + f) / 2.0;
+	return std::sqrt(s * (s - a) * (s - b) * (s - c) * (s - d) * (s - e) * (s - f));
+}
+
 double Triangle::getTriangleArea(double a, double b, double c, double d, double e, double f) const
 {
 	double s = (a + b + c + d + e + f) / 2.0;
