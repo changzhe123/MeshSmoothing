@@ -25,7 +25,7 @@ int main()
     std::cout << "Area of triangle is: " << tri_area1 << std::endl;
 
     Triangle tri2(p1, p2, p3);
-    double tri_area2 = tri2.getTriangleArea1(p1, p2, p3);
+    double tri_area2 = tri2.getTriangleAreaPro(p1, p2, p3);
     std::cout << "Area of triangle is: " << tri_area2 << std::endl;
 
     Circle circle(2.0);
