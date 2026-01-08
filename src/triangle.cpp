@@ -27,6 +27,7 @@ double Triangle::getTriangleAreaPro(const Point3& p1, const Point3& p2, const Po
 	auto vectorLength = [](Point3 v) {return std::sqrt(v._x * v._x + v._y * v._y + v._z * v._z);};
 	double vector = vectorLength(cross);
 	double vectorlength = Point3::Dot(AB, AC);
+	double vec = AB.DotPro(AC);
 	return 0.5 * vector;
 }
 
