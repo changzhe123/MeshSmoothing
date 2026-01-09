@@ -8,10 +8,13 @@ class Circle : public Shape
 {
 public:
 
+	Circle();
 	Circle(double radius);
 	Circle(double radius, const Point3& center);
 
 	double getCircleArea(double radius) const override;
+
+	double getRadius() const override;
 
 private:
 

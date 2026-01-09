@@ -11,4 +11,9 @@ double Circle::getCircleArea(double radius) const
     return 3.14159265358979323846 * radius * radius;
 }
 
+double Circle::getRadius() const
+{
+    return radius;
+}
+
 NAMESPACE_CZ_END

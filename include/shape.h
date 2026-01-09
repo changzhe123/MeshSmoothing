@@ -15,6 +15,8 @@ public:
 	virtual double getTriangleArea(double a, double b, double c, 
 		double d, double e, double f) const;
 
+	virtual double getRadius() const { return 0.0; }
+
 private:
 
 	double width;
