@@ -17,14 +17,11 @@ int main()
     double rect_area = rect.getRectangleArea(5.0, 2.0);
     std::cout << "Area of rectangle is: " << rect_area << std::endl;
 
-    Point3 p1(1, 1, 1);
-    Point3 p2(5, 4, 3);
-    Point3 p3(5, 1, 3);
-
     Triangle tri1(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
     double tri_area1 = tri1.getTriangleArea(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
     std::cout << "Area of triangle is: " << tri_area1 << std::endl;
 
+    Point3 p1(1, 1, 1); Point3 p2(5, 4, 3); Point3 p3(5, 1, 3);
     Triangle tri2(p1, p2, p3);
     double tri_area2 = tri2.getTriangleAreaPro(p1, p2, p3);
     std::cout << "Area of triangle is: " << tri_area2 << std::endl;
@@ -57,9 +54,7 @@ int ceshi()
     std::cout << atan2(1, -1) << std::endl;
     std::cout << atan2(-1, -1) << std::endl;
     std::cout << atan2(-1, 1) << std::endl;
-    
-    
-    
+
     double heights[10] = { 0 };
     for (auto height : heights)
     {
@@ -106,7 +101,6 @@ int ceshi()
         //std::cout << "john is found" << it->second << std::endl;
     }
     
-    
     std::vector<int> vec = { 1, 2, 3 };
     size_t element = vec.size();// 使用size_t接收容器大小
     
@@ -150,8 +144,7 @@ int ceshi()
     
     double d = 3.99;
     int e = static_cast<int>(d);      // 场景3：double转int（会截断小数部分，不是四舍五入）
-    //std::cout << "e = " << e << std::endl;  // 输出：3
-    
+    //std::cout << "e = " << e << std::endl;  // 输出：3  
 }
 
 
