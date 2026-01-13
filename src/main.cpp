@@ -39,7 +39,31 @@ int main()
     for (auto shape : shapes)
     {
         double area = shape->getCircleArea(shape->getRadius());
+        std::cout << "Area of circle is: " << area << std::endl;
     }
+
+	std::unique_ptr<int> ptr = std::make_unique<int>(42);
+	std::cout << "Value: " << *ptr << std::endl;
+
+    // std::unique_ptr ptr1 = ptr; // 错误：unique_ptr 不可拷贝
+    std::unique_ptr<int> ptr1 = std::move(ptr); // 正确：使用 std::move 转移所有权
+	if (ptr == nullptr)
+    {
+        std::cout << "ptr is null after move." << std::endl;
+        std::cout << "Value after move: " << *ptr1 << std::endl;
+    }
+
+	std::shared_ptr<int> sptr1 = std::make_shared<int>(100);
+    std::cout << "引用次数" << sptr1.use_count() << std::endl;
+	std::shared_ptr<int> sptr2 = sptr1; // 正确：shared_ptr 可拷贝，引用计数增加
+    std::cout << "引用次数"  << sptr1.use_count() << std::endl;
+
+    *sptr1 = 200;
+    std::cout << "sptr1: " << *sptr2 << std::endl;
+
+    sptr1.reset();
+    std::cout << "引用次数" << sptr2.use_count() << std::endl;
+
 
     return 0;
 }
