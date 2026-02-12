@@ -7,25 +7,36 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# # 收集所有源文件
+# file(GLOB_RECURSE PROJECT_SOURCES
+#     ${PROJECT_SOURCE_DIR}/src/circle.cpp
+# 	${PROJECT_SOURCE_DIR}/src/fourcutter.cpp
+# 	${PROJECT_SOURCE_DIR}/src/main.cpp
+# 	${PROJECT_SOURCE_DIR}/src/point3.cpp
+# 	${PROJECT_SOURCE_DIR}/src/rectangle.cpp
+# 	${PROJECT_SOURCE_DIR}/src/shape.cpp
+# 	${PROJECT_SOURCE_DIR}/src/triangle.cpp
+# )
+
 # 收集所有源文件
-file(GLOB_RECURSE PROJECT_SOURCES
-    ${PROJECT_SOURCE_DIR}/src/circle.cpp
-	${PROJECT_SOURCE_DIR}/src/fourcutter.cpp
-	${PROJECT_SOURCE_DIR}/src/main.cpp
-	${PROJECT_SOURCE_DIR}/src/point3.cpp
-	${PROJECT_SOURCE_DIR}/src/rectangle.cpp
-	${PROJECT_SOURCE_DIR}/src/shape.cpp
-	${PROJECT_SOURCE_DIR}/src/triangle.cpp
+set(PROJECT_SOURCES
+    src/circle.cpp
+	src/fourcutter.cpp
+	src/main.cpp
+	src/point3.cpp
+	src/rectangle.cpp
+	src/shape.cpp
+	src/triangle.cpp
 )
 
-file(GLOB_RECURSE PROJECT_HEADERS
-	${PROJECT_SOURCE_DIR}/include/circle.h
-	${PROJECT_SOURCE_DIR}/include/fourcutter.h
-	${PROJECT_SOURCE_DIR}/include/point3.h
-	${PROJECT_SOURCE_DIR}/include/rectangle.h
-	${PROJECT_SOURCE_DIR}/include/shape.h
-	${PROJECT_SOURCE_DIR}/include/shape_namespace_def.h
-	${PROJECT_SOURCE_DIR}/include/triangle.h
+set(PROJECT_HEADERS
+	include/circle.h
+	include/fourcutter.h
+	include/point3.h
+	include/rectangle.h
+	include/shape.h
+	include/shape_namespace_def.h
+	include/triangle.h
 )
 
 # 防御性检查，避免 No SOURCES 错误
